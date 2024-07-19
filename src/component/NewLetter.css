@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    /* background-color:; */
+    color: hsl(234, 29%, 20%);
+    background-color:hsl(235, 18%, 26%);
+}
+
+.container{
+    width: 850px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 3%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.container >.text-content{
+    padding: 15px;
+}
+.container > .text-content h2{
+    text-align: center;
+    font-size: 2.8rem;
+    margin: 5px 0 10px 0;
+}
+.container > .text-content p{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.text-content >.icon-text{
+    margin: 20px 0 30px 10px;
+    font-size: 1rem;
+}
+.text-content >.icon-text p{
+    display: flex;
+    align-items:baseline ;
+    justify-content: baseline;
+    gap: 15px;
+}
+.container >.text-content form{
+    margin: 20px 0;
+}
+.text-content >form label{
+    font-weight: 600;
+}
+.text-content >form input{
+    font-weight: 400;
+    display: block;
+    margin: 15px 0;
+    padding: 8px;
+    width: 100%;
+    font-size:1rem ;
+    border: 2px solid #aaa;
+    border-radius: 5px;
+    outline-color: rgb(99, 99, 135);
+    padding-left: 15px;
+}
+form input::placeholder{
+    font-size: 15px;
+}
+form button{
+    width: 100%s;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    border: 0;
+    border-radius:5px ;
+    background-color: hsl(234, 29%, 20%);
+    cursor: pointer;
+    user-select: none;
+    transition: 0.5s;
+}
+form button:hover{
+   background: rgba(0, 128, 0, 0.872);
+}
+form span{
+    font-size: 13px;
+    margin-left: 10px;
+    font-weight: 600;
+    color: tomato;
+}
+
+.errorState::placeholder{
+    color: red;
+}
+.subscribe-box{
+    width: 400px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 4%;
+    animation: forwards  box 0.5s;
+    transition: 1s;
+    user-select: none;
+}
+.subscribe-box >img{
+    padding: 10px;
+    margin: 20px 0 5px 0;
+}
+.subscribe-box h2{
+    font-size: 2.5rem;
+    padding: 20px 0 0 10px;
+}
+.subscribe-box p{
+    font-size: 0.8rem;
+    padding: 20px;
+}
+.subscribe-box span{
+    font-weight: 600;
+}
+.subscribe-box button{
+    padding: 10px 20px;
+    font-weight: bold;
+    border: 0;
+    border-radius:5px ;
+    background-color: hsl(234, 29%, 20%);
+    color: white;
+    width: 100%;
+    cursor: pointer;
+}
+.subscribe-box button:hover{
+    background-color: tan;
+}
+@keyframes box {
+    0%{
+        transform:translateY(-100%) ;
+        opacity: 0;
+    }
+    100%{
+       transform: translateY(0);
+       opacity: 1;
+    }
+}
+@media screen and (max-width:600px){
+    .container{
+    width: 590px;
+    flex-flow: column;
+    }
+    .image-tag{
+        order: 1;
+        width: 580px;
+    }
+    .image-tag img{
+        width: 100%;
+    }
+    .text-content{
+        order: 2;
+    }
+    .subscribe-box button{
+        width: 100%;
+    }
+    .subscribe-box {
+        width: 100%;
+        padding: 20px;
+        background-color: white;
+        border-radius: 4%;
+        animation: forwards box 0.5s;
+        transition: 1s;
+        user-select: none;
+    }
+}
+@media screen and (max-width:500px){
+    .container{
+    width: 490px;
+    flex-flow: column;
+    padding: 5px;
+    }
+    .image-tag {
+        order: 1;
+        width: 480px;
+    }
+
+    .image-tag img {
+        width: 100%;
+    }
+}
+@media screen and (max-width:400px){
+    .container{
+    width: 390px;
+    }
+    .image-tag {
+        order: 1;
+        width: 380px;
+    }
+
+    .image-tag img {
+        width: 100%;
+    }
+   
+}
