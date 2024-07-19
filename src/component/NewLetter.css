@@ -148,6 +148,9 @@ form span{
     }
 }
 @media screen and (max-width:600px){
+    body{
+        background-color:white;
+    }
     .container{
     width: 590px;
     flex-flow: column;
